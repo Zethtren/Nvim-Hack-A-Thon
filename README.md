@@ -41,60 +41,70 @@ There are more that you can enter.
 
 ## Ways to enter insert mode
 
-aA -> Insert at end of current cursor, Insert at end of current line.
-iI -> insert at start of current cursor, Insert at start of current line.
-oO -> Create and insert to a new line below, to a new line above.
-\<Esc\> -> Exit insert mode.
+- aA -> Insert at end of current cursor, Insert at end of current line.
+- iI -> insert at start of current cursor, Insert at start of current line.
+- oO -> Create and insert to a new line below, to a new line above.
+- \<Esc\> -> Exit insert mode.
 
 ## Normal Mode Actions
 
 The above insert options are only available in normal mode.
 : to ender command mode
-Motion commands.
-v -> Enter Visual mode. (Motion commands in Visual and Ex mode are the same as normal)
-V -> Enter Visual line mode. (Same as v except you highlight entire lines at a time.)
-d -> Cut in Ex mode. dd cuts the current line
-x -> Cut current cursor selection
-y -> Copy Current selection in V or enter Ex mode for copy yy grabs the current line.
-p -> Paste after cursor line
-P -> Paste before cursor line
-gg -> Go to top of file
-g\<num\> -> Go to line number
-\<num\>hjkl -> Move num
-G -> Go to end of file
+
+Motion commands:
+
+- v -> Enter Visual mode. (Motion commands in Visual and Ex mode are the same
+  as normal)
+- V -> Enter Visual line mode. (Same as v except you highlight entire lines at
+  a time.)
+- d -> Cut in Ex mode. dd cuts the current line
+- x -> Cut current cursor selection
+- p -> Paste after cursor line
+- P -> Paste before cursor line
+- y -> Copy Current selection in V or enter Ex mode for copy yy grabs the
+  current line.
+- \<num\>hjkl -> Move num
+- g\<num\> -> Go to line number
+- gg -> Go to top of file
+- G -> Go to end of file
 
 ### Normal Actions Plugins
 
-K -> Show documentation for selected code
-gd -> Go to Definition
-]t \[t -> Go to next TODO, previous TODO
-]d [d -> Go to next diagnostic (error), previous
-u -> Undo
-C-r -> Redo
-\<Leader\>... -> Honestly tons of stuff I will just go over the ones I use regularly
-\<L\>qq -> quit all
-\<L\>bb -> next buffer
-\<L\>| -> Split vertical
-\<L\>- -> Split horizontal
-\<L\>\<Space\> -> Search files
-\<L\>xx -> Show all diagnostics
-\<C-/\> -> Toggle Terminal
+- K -> Show documentation for selected code
+- gd -> Go to Definition
+- ]t \[t -> Go to next TODO, previous TODO
+- ]d \[d -> Go to next diagnostic (error), previous
+- u -> Undo
+- C-r -> Redo
+- \<Leader\>... -> Honestly tons of stuff I will just go over the ones I use regularly
+- \<L\>bb -> next buffer
+- \<L\>- -> Split horizontal
+- \<L\>qq -> quit all
+- \<L\>| -> Split vertical
+- \<L\>\<Space\> -> Search files
+- \<L\>xx -> Show all diagnostics
+- Ctrl-/ -> Toggle Terminal
+- \<L\>ca -> Code actions. (Automatically fix known errors / grammars.)
+- \<L\>cr -> Rename the selected variable
+- \<L\>us -> Toggle Spelling corrections.
+- Alt-j -> Move current selection (or line of cursor) down
+- Alt-k -> Move current selection up
 
 ### Ex Mode Visual Plugins
 
-af -> Select entire function + definition
-if -> Entire function without definition
-ac -> Entire class with definition
-ic -> Entire class without definition
-C-Space -> Increment logical selection up syntax tree
-BackSpace -> Increment down syntax tree.
-as -> entire scope including {} in c-like languages
-is -> entire scopt excluding {} in c-like languages
-Many more that I don't often use.
+- af -> Select entire function + definition
+- if -> Entire function without definition
+- ac -> Entire class with definition
+- ic -> Entire class without definition
+- Ctrl-Space -> Increment logical selection up syntax tree
+- BackSpace -> Increment down syntax tree.
+- as -> entire scope including {} in c-like languages
+- is -> entire scopt excluding {} in c-like languages
+  Many more that I don't often use.
 
 ## Macros
 
-q -> any key will start a macro recording.
+- q -> any key will start a macro recording.
 
 Do anything you want to repeat. Press q to end the recording and then
 call with @key or num@key to repeat the action one or num times.
